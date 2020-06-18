@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso JavaScript</title>
+	<marquee>Desafioooosss!!</marquee>
+</head>
+<body>
+	<div id="app">
+		<button class="quadrado">Novo Quadrado!</button>
+		<br>
+		<div id="box"></div>
+	</div>
+
+	<script type="text/javascript">
+		var btn = document.querySelector('button.quadrado');
+		var box = document.querySelector('#box');
+
+		btn.onclick = function (){
+			var newDiv = document.createElement('div');
+			var newPula = document.createElement('br');
+			var nQuad = document.createElement(newQuadrado(newDiv));
+			newDiv.appendChild(nQuad);
+			var div = document.getElementById('app2#box');
+			document.body.insertBefore(newDiv, div);
+			document.body.insertBefore(newPula, newDiv);
+		}	
+
+		function newQuadrado(n){
+			n.style.width = "100px";
+			n.style.height = "100px";
+			n.style.backgroundColor = '#f00';
+			console.log('Quadrado criado.')
+		}	
+	</script>
+</body>
+</html>

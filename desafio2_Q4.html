@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso JavaScript</title>
+	<marquee>Desafioooosss!!</marquee>
+</head>
+<body>
+
+	<input type="text" name="nome">
+	<button onclick="adicionar()">Adicione aí, joia!</button>
+
+	<script type="text/javascript">
+		var nomes = ["Jv", "Alcoolgelson", "Covidiane", "Coronildes", "Loquidalson"];
+		var topics = document.createElement("ul");
+		var btn = document.querySelector('button');
+		var newNome = document.querySelector('input');
+		topics.setAttribute('id','topics');
+		document.body.appendChild(topics);
+
+		for (let x of nomes){
+			var topic = document.createElement("li");
+			topic.appendChild(document.createTextNode(x));
+			var ulTop = document.querySelector("#topics");
+			ulTop.appendChild(topic);
+		}
+
+		function adicionar(){
+			var topic = document.createElement("li");
+			topic.appendChild(document.createTextNode(newNome.value));
+			var ulTop = document.querySelector("#topics");
+			ulTop.appendChild(topic);
+			newNome.value = '';
+		}
+
+	</script>
+</body>
+</html>

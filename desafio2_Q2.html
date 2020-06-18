@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso JavaScript</title>
+	<marquee>Desafioooosss!!</marquee>
+</head>
+<body>
+	<div id="app">
+		<button class="quadrado">Coloca um Quadrado novo aí, minha joia!</button>
+		<br>
+		<div id="box"></div>
+	</div>
+
+	<script type="text/javascript">
+		var btn = document.querySelector('button.quadrado');
+		var box = document.querySelector('#box');
+
+		btn.onclick = function (){
+			var newDiv = document.createElement('div');
+			var newPula = document.createElement('br');
+			var nQuad = document.createElement(newQuadrado(newDiv));
+			var div = document.getElementById('app2#box');
+			document.body.insertBefore(newDiv, div);
+			document.body.insertBefore(newPula, newDiv);
+			newDiv.onmouseover = function (){
+				newDiv.style.backgroundColor = getRandomColor();
+			}
+		}
+
+		function getRandomColor() {
+ 			var letters = "0123456789ABCDEF";
+ 			var color = "#";
+ 			for (var i = 0; i < 6; i++) {
+ 				color += letters[Math.floor(Math.random() * 16)];
+ 			}
+ 			return color;
+		}
+
+		function newQuadrado(n){
+			n.style.width = "100px";
+			n.style.height = "100px";
+			n.style.backgroundColor = getRandomColor();
+			console.log('Quadrado criado.')
+		}	
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso JavaScript</title>
+	<marquee>Desafioooosss!!</marquee>
+</head>
+<body>
+
+	<!--Só script, joia!-->
+
+	<script type="text/javascript">
+		var nomes = ["Jv", "Alcoolgelson", "Covidiane", "Coronildes", "Loquidalson", "..."];
+		var topics = document.createElement("ul");
+		topics.setAttribute('id','topics');
+		document.body.appendChild(topics);
+
+		for (let x of nomes){
+			var topic = document.createElement("li");
+			topic.appendChild(document.createTextNode(x));
+			var ulTop = document.querySelector("#topics");
+			ulTop.appendChild(topic);
+		}
+
+	</script>
+</body>
+</html>

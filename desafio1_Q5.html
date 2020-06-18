@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Curso JavaScript</title>
+	<marquee>DESAFIOOOOOOOOOO!!!</marquee>
+</head>
+<body>
+
+	<script type="text/javascript">
+		var usuarios = [
+			{
+				nome: "João Victor", habilidades:["Python","Java","C"]
+			},
+			{
+				nome: "Joana", habilidades:["Java","JavaScript","ABC"]
+			}
+		];
+
+		function percorreJunta(u){
+			for(let i of u){
+				console.log('O(A) usuário(a) '+ i['nome'] + ' possui as habilidades: ' + i['habilidades'] + '.');
+			}
+		}
+
+		percorreJunta(usuarios);
+	</script>
+</body>
+</html>
